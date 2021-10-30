@@ -1,0 +1,11 @@
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 10px 50px;
+    
+}
+.services-container img{
+    height: 350px;
+    width: 350px;
+}

@@ -2,7 +2,7 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
@@ -21,13 +21,11 @@ const Header = () => {
       <Nav.Link as={NavLink} to="/services">Services</Nav.Link>
       <Nav.Link as={NavLink} to="/contact us">Contact Us</Nav.Link>
       {user?.email ?
-        <Button onClick={logOut} variant="light">Log Out</Button> :
-         <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
-       }
+      <Button onClick={logOut} variant="light">Logout</Button> :
+       <Nav.Link as={Link} to="/login">Login</Nav.Link>}
       <Navbar.Text>
-          signed in as: <a href = "#login">{user?.displayName}</a>
-      </Navbar.Text>
-
+        Signed in as: <a href="#login">{user?.displayName}</a>
+    </Navbar.Text>
     </Nav>
         </div>
     </Container>

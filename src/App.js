@@ -7,7 +7,8 @@ import Services from './components/Services/Services';
 import Login from './components/Login/Login';
 import Authprovider from './contexts/Authprovider';
 import PrivetRoute from './Pages/PrivetRoute/PrivetRoute';
-import Details from './components/Details/Details';
+import Footer from './Pages/Footer/Footer';
+import Booking from './components/Booking/Booking';
 
 function App() {
   return (
@@ -28,11 +29,12 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivetRoute path="/details/:detailsId">
-           <Details></Details>
-          </PrivetRoute>
+          <PrivetRoute path="/booking/:serviceId">
+           <Booking></Booking>
+            </PrivetRoute>
           <Route></Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </Authprovider>
     </div>
